@@ -1,0 +1,20 @@
+{
+  "text": {
+    "github_repo": "https://github.com/YOUR_USERNAME/god-text-miner",
+    "commit_hash": "b4c468c8b5f5dcda596e229d4ef492c47a149680",
+    "github_token": null,
+    "requested_datasets": null
+  },
+  "image": {
+    "github_repo": "https://github.com/YOUR_USERNAME/god-text-miner",
+    "commit_hash": "b4c468c8b5f5dcda596e229d4ef492c47a149680",
+    "github_token": null,
+    "requested_datasets": null
+  },
+  "environment": {
+    "github_repo": "https://github.com/YOUR_USERNAME/god-text-miner",
+    "commit_hash": "b4c468c8b5f5dcda596e229d4ef492c47a149680",
+    "github_token": null,
+    "requested_datasets": null
+  }
+}

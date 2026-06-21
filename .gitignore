@@ -1,0 +1,60 @@
+# Python / venv
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Env & secrets
+.env
+.env.*
+.*.env
+secrets.json
+*.pem
+
+# macOS
+.DS_Store
+
+# POC runtime (rebuilt on VPS)
+poc/cache/*
+!poc/cache/.gitkeep
+poc/outputs/*
+!poc/outputs/.gitkeep
+poc/results/*
+!poc/results/.gitkeep
+
+# Large ML artifacts
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+secure_checkpoints/
+wandb/
+mlruns/
+
+# Original subnet runtime
+original/secure_checkpoints/
+original/outputs/
+original/cache/
+original/.bittensor/
+original/.*.env
+
+# Miner training artifacts
+miner-text/scripts/wandb/
+miner-text/scripts/outputs/
+miner-text/scripts/mlruns/
+miner-text/scripts/datasets/
+
+# IDE
+.idea/
+.vscode/
+.cursor/
+
+# Agent local only (optional skills cache)
+.agent/

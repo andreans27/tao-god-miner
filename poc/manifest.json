@@ -1,0 +1,229 @@
+{
+  "generated_at": "2026-06-21T08:29:19.925296+00:00",
+  "source": "https://api.gradients.io",
+  "tournament_id": "tourn_2cd19ba0c3b9771f_20260618",
+  "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+  "base_winner_hotkey": "5H9AM1bG7m1BFagftX3B4X1SfyeBSsMYodTcWuM9ieQZk2NK",
+  "boss_round_wins_required": 4,
+  "boss_round_total_tasks": 6,
+  "boss_battery": [
+    {
+      "task_id": "d573960c-4c46-4d22-9469-55c8c20ddf00",
+      "task_type": "InstructTextTask",
+      "model_id": "oopsung/llama2-7b-koNqa-test-v1",
+      "hours_to_complete": 6.0,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/c0022e40697dd962_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T035540Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1a370ee8c3d67dfc59053c779f66c522d5b703d56ae980243c16e591c98e5186",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/19e5e172ff73d3ce_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T035535Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=806712391a4c4b4bfb44274e7e91516de453db6cdc853f872a97db025794329a",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-a70f80a2-e5de-4927-b85d-de8189e180b7-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-a70f80a2-e5de-4927-b85d-de8189e180b7-5F53bVrV",
+      "boss_score": 0.47043725848197937,
+      "challenger_score": 0.4750213623046875,
+      "threshold_used": 0.0,
+      "challenger_won": false,
+      "field_instruction": "instruct",
+      "field_input": null,
+      "field_output": "output",
+      "field_system": null,
+      "field_prompt": null,
+      "field_chosen": null,
+      "field_rejected": null,
+      "reward_functions": null,
+      "use_kl": null,
+      "kl_coef": null
+    },
+    {
+      "task_id": "d5f8b49d-8bda-4e10-8c47-d452747a0210",
+      "task_type": "GrpoTask",
+      "model_id": "princeton-nlp/Sheared-LLaMA-1.3B",
+      "hours_to_complete": 1.5,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/ab052f933e26e02a_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T051301Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=168d824b06fa63c359d6b36ca3c845d78a0292c63b3de6c462dc3fab9d9330de",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/41d984f59f3097b0_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T051246Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d5b4cf9a073fe1dbcd2438bda557dbe6ddcab5ca1c23a86442b144bd25d19e50",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-ea04d6aa-93b4-418d-94da-b5c57ccafb1e-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-ea04d6aa-93b4-418d-94da-b5c57ccafb1e-5F53bVrV",
+      "boss_score": 0.5652494533076309,
+      "challenger_score": 0.618167835551044,
+      "threshold_used": 0.0,
+      "challenger_won": true,
+      "field_instruction": null,
+      "field_input": null,
+      "field_output": null,
+      "field_system": null,
+      "field_prompt": "prompt",
+      "field_chosen": null,
+      "field_rejected": null,
+      "reward_functions": [
+        {
+          "reward_func": "def reward_textstat_words_per_sentence_target(completions, **kwargs):\n    import textstat\n    target = 21.3043\n    scale = 8.6602\n    return [\n        -(abs(textstat.words_per_sentence(c) - target) / scale)\n        for c in completions\n    ]\n",
+          "reward_weight": 0.14785844519860342,
+          "func_hash": "e0d823b1ff19d0936981afc449800de1d5575a8be728475f534bb916fa40048d",
+          "is_generic": true
+        },
+        {
+          "reward_func": "def reward_completion_length(completions, **kwargs):\n    sign = -1\n    return [sign * float(len(c)) for c in completions]\n",
+          "reward_weight": 0.3600108849626686,
+          "func_hash": "2ab92c4aea648fb37380179fc333253dcb8b83182b13b0246906f59ed72c462f",
+          "is_generic": true
+        },
+        {
+          "reward_func": "def reward_keyword_presence(completions, **kwargs):\n    keywords = ['because', 'therefore', 'thus', 'hence', 'consequently', 'however', 'nevertheless', 'although', 'despite', 'whereas', 'example', 'instance', 'specifically', 'particularly', 'furthermore', 'moreover', 'additionally', 'analyze', 'evaluate', 'consider', 'examine', 'determine']\n    return [\n        sum(1 for kw in keywords if kw in c.lower())\n        for c in completions\n    ]\n",
+          "reward_weight": 0.19466922068053835,
+          "func_hash": "6dcd43d24aee8c625b2405fd66d80755c8fae8c71b1a2910df5b9b0fc66d3de8",
+          "is_generic": true
+        },
+        {
+          "reward_func": "def reward_textstat_avg_character_per_word_target(completions, **kwargs):\n    import textstat\n    target = 3.9586\n    scale = 2.4054\n    return [\n        -(abs(textstat.avg_character_per_word(c) - target) / scale)\n        for c in completions\n    ]\n",
+          "reward_weight": 0.2974614491581898,
+          "func_hash": "9393cdbc15753c5622da463277f8d346d4a6946dc4bf27cdf89b8d80c432d27e",
+          "is_generic": true
+        }
+      ],
+      "use_kl": null,
+      "kl_coef": null
+    },
+    {
+      "task_id": "c0d6068c-ed7a-4f41-ac54-7a95cea9b247",
+      "task_type": "DpoTask",
+      "model_id": "tokyotech-llm/Llama-3-Swallow-8B-v0.1",
+      "hours_to_complete": 0.75,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/15a605895f1dbff3_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T090951Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a08e155396d517572804bf8aabdca64509dac78ff37cbb66e227ec17fef98856",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/9826097d1b1d6d78_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T090951Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6a7348ac1927b88627eee01826fed40a610f534030c0f5ac6176bbdb173fce3f",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-1ac65c55-5368-48ee-bdbe-6478a5f93e1c-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-1ac65c55-5368-48ee-bdbe-6478a5f93e1c-5F53bVrV",
+      "boss_score": 0.031820833683013916,
+      "challenger_score": 0.03251204639673233,
+      "threshold_used": 0.0,
+      "challenger_won": false,
+      "field_instruction": null,
+      "field_input": null,
+      "field_output": null,
+      "field_system": null,
+      "field_prompt": "prompt",
+      "field_chosen": "chosen",
+      "field_rejected": "rejected",
+      "reward_functions": null,
+      "use_kl": null,
+      "kl_coef": null
+    },
+    {
+      "task_id": "0ba5cb56-a207-4de5-937f-bede0860cc8a",
+      "task_type": "InstructTextTask",
+      "model_id": "Qwen/Qwen1.5-7B",
+      "hours_to_complete": 1.25,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/2c826e05c9d68ede_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T105945Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=743fbf9949ee97e067b175cc9e188abbee49de68b47448e61783bc92e61fbd65",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/524c7a0a780d2b6b_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T105943Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a3fba3421c84998ad2cd41b9375571ab72f7d6c9bfeb304f6a9298abe8f58720",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-d64ef5da-8fcd-4c13-9ce7-d262daaefa46-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-d64ef5da-8fcd-4c13-9ce7-d262daaefa46-5F53bVrV",
+      "boss_score": 0.8296771049499512,
+      "challenger_score": 0.8302308320999146,
+      "threshold_used": 0.0,
+      "challenger_won": false,
+      "field_instruction": "instruct",
+      "field_input": null,
+      "field_output": "output",
+      "field_system": null,
+      "field_prompt": null,
+      "field_chosen": null,
+      "field_rejected": null,
+      "reward_functions": null,
+      "use_kl": null,
+      "kl_coef": null
+    },
+    {
+      "task_id": "d31f5b22-74e2-4b1b-a059-5cc8f48abff1",
+      "task_type": "GrpoTask",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "hours_to_complete": 1.5,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/d0233fbeede8ed62_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T121442Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f24ac140f25ff147da02013615afa31e2c93d8ff294b9672847fa6853d4e9bcf",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/79095b72233f3e81_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T121441Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=533073611431f792ed4901939696bce235536b19f4acca4e4415cc2ef3f8ad73",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-33a3f0f4-214c-4776-a409-bf8ba3e0726e-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-33a3f0f4-214c-4776-a409-bf8ba3e0726e-5F53bVrV",
+      "boss_score": 0.145095104314596,
+      "challenger_score": 0.24345209646301658,
+      "threshold_used": 0.0,
+      "challenger_won": true,
+      "field_instruction": null,
+      "field_input": null,
+      "field_output": null,
+      "field_system": null,
+      "field_prompt": "prompt",
+      "field_chosen": null,
+      "field_rejected": null,
+      "reward_functions": [
+        {
+          "reward_func": "def reward_textstat_words_per_sentence_target(completions, **kwargs):\n    import textstat\n    target = 10.9427\n    scale = 12.3679\n    return [\n        -(abs(textstat.words_per_sentence(c) - target) / scale)\n        for c in completions\n    ]\n",
+          "reward_weight": 0.22070802656311417,
+          "func_hash": "edd57aad7ce141ba442cc65e372893dfdebbe8da0cd623f1339394325e73d40c",
+          "is_generic": true
+        },
+        {
+          "reward_func": "def reward_keyword_presence(completions, **kwargs):\n    keywords = ['step', 'process', 'method', 'approach', 'technique', 'solution', 'algorithm', 'procedure', 'strategy', 'implement', 'execute', 'apply', 'design', 'optimize']\n    return [\n        sum(1 for kw in keywords if kw in c.lower())\n        for c in completions\n    ]\n",
+          "reward_weight": 0.21130106406015092,
+          "func_hash": "3fd028733e06b92b125af385f45455416d444e7948965bbd2b48900d95970876",
+          "is_generic": true
+        },
+        {
+          "reward_func": "def reward_langcheck_fluency(completions, **kwargs):\n    import langcheck\n    scores = langcheck.metrics.fluency(completions)\n    sign = 1\n    return [sign * s for s in scores.metric_values]\n",
+          "reward_weight": 0.1904448425959813,
+          "func_hash": "d0c2e351ee57b4e87022938d0d1fe649b9414bfc9929ebd9634f50761f52dcd7",
+          "is_generic": true
+        }
+      ],
+      "use_kl": null,
+      "kl_coef": null
+    },
+    {
+      "task_id": "c67b8eea-0354-4e00-8da7-2462511353f9",
+      "task_type": "DpoTask",
+      "model_id": "unsloth/Llama-3.2-3B-Instruct",
+      "hours_to_complete": 1.0,
+      "test_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/f08ec98603c9a320_test_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T164707Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0c0f341833bf341f49def0c4f2522a9d2339c394c4c5bc143a883a39852db8cd",
+      "training_data_url": "https://s3.eu-central-003.backblazeb2.com/gradients-validator/45d664d907dfaf64_train_data.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=00362e8d6b742200000000002%2F20260619%2Feu-central-003%2Fs3%2Faws4_request&X-Amz-Date=20260619T164706Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ecd921865552a8901932907526635a0c87182e748d25ac7d76c61e61009709d7",
+      "winner_hotkey": "5GU4Xkd3dCGTU3s8VLcHGc5wsD5M8XyxDca5yDQhYm1mVXFu",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-4d03ae84-f615-41af-aa1a-96cac0b163e1-5GU4Xkd3",
+      "boss_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-4d03ae84-f615-41af-aa1a-96cac0b163e1-5F53bVrV",
+      "boss_score": 6.61998928990215e-05,
+      "challenger_score": 6.992551789153367e-05,
+      "threshold_used": 0.0,
+      "challenger_won": false,
+      "field_instruction": null,
+      "field_input": null,
+      "field_output": null,
+      "field_system": null,
+      "field_prompt": "prompt",
+      "field_chosen": "chosen",
+      "field_rejected": "rejected",
+      "reward_functions": null,
+      "use_kl": null,
+      "kl_coef": null
+    }
+  ],
+  "regression_suite": [
+    {
+      "task_id": "d573960c-4c46-4d22-9469-55c8c20ddf00",
+      "task_type": "InstructTextTask",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-a70f80a2-e5de-4927-b85d-de8189e180b7-5GU4Xkd3"
+    },
+    {
+      "task_id": "d5f8b49d-8bda-4e10-8c47-d452747a0210",
+      "task_type": "GrpoTask",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-ea04d6aa-93b4-418d-94da-b5c57ccafb1e-5GU4Xkd3"
+    },
+    {
+      "task_id": "c0d6068c-ed7a-4f41-ac54-7a95cea9b247",
+      "task_type": "DpoTask",
+      "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-1ac65c55-5368-48ee-bdbe-6478a5f93e1c-5GU4Xkd3"
+    }
+  ],
+  "smoke": {
+    "task_id": "d5f8b49d-8bda-4e10-8c47-d452747a0210",
+    "task_type": "GrpoTask",
+    "model_id": "princeton-nlp/Sheared-LLaMA-1.3B",
+    "hours_to_complete": 1.5,
+    "winner_repo": "gradients-io-tournaments/tournament-tourn_2cd19ba0c3b9771f_20260618-ea04d6aa-93b4-418d-94da-b5c57ccafb1e-5GU4Xkd3"
+  }
+}
